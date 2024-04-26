@@ -13,6 +13,7 @@ The link to the dataset can be found here: (https://data.world/gene/military-sur
 
 ### Police Fatality Dataset
 
+The Police Fatality dateset had 28,335 rows and 29 columns.
 The link to the dataset can be found here: (https://www.kaggle.com/datasets/djonafegnem/police-fatalities-in-the-us-from-2000-to-2020)
 
 ### Methodology
@@ -20,9 +21,6 @@ The link to the dataset can be found here: (https://www.kaggle.com/datasets/djon
 #### Objectives
 1033 FOIA Dataset
 - Clean 
-    - Expand data by unit
-    - Change County case
-    - Change date to Datetime
 - Create columns by County for:
     - Total acquisition value
     - Total number of items acquired
