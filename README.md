@@ -64,7 +64,19 @@ I assess the drop in fatalities in 2020 is due to the COVID-19 pandemic. Perhaps
 
 ### Top States and Counties with High Numbers of Militarized Equipment and High Instances of Fatal Encounters with Police
 
+Using simple bar charts, I wanted to provide a visualization of where fatalities were happening and which locations were receiving geat amounts of equipment. In a way, these charts helped me realize that though these numbers are flashy, the majority of counties across the US are not similar to the major cities/counties depicted here and that these location's data would likely skew modeling.
 
+![Alt text](images/Fatalities_by_state.png)
+
+![Alt text](images/top_state_equipment.png)
+
+Interestingly, the top 6 states in each chart are the same. Only about 3 states per chart do not appear on the other chart. This indicates that states with high amounts of militarized equipment generally do have high rates of fatalities caused by intentional use of force.
+
+![Alt text](images/Fatalities_by_county.png)
+
+![Alt text](images/top_county_equipment.png)
+
+Conversely, these charts only have 3 counties in common. Therefore at the local level it is much harder to generalize conclusions abou the relationship between the amount of equipment the county has and the the numbers of fatal encounters with Law Enforcement.
 
 ## Predictive Modeling
 
@@ -83,15 +95,15 @@ Based on the correlation heatamp below, I decided to create a linear regression 
 
 ### Linear Regression 
 
-When looking at the whole dataset, there is a linear relationship between the amount of militarized equipment as the independent variable and the number of fatalities as the dependent variable, but the large amount of viariance in the model is evident. Using this subset of data, I got an R^2 value of 0.66 and a Mean Squared Error value of 916.19.
+When looking at the whole dataset, there is a linear relationship between the amount of militarized equipment as the independent variable and the number of fatalities as the dependent variable, but the large amount of viariance in the model is evident. This model produced an R^2 value of 0.66 and a Mean Squared Error value of 916.19.
 
 ![Alt text](images/lin_reg_before.png) 
 
-Even after scoping the dataset to cut out counties such as Cook County, IL (Chicago) and remove counties that had no instances of fatalities or transfers of militarized equipment, the model still did not fit well. Using this subset of data, I acheived an R^2 value of 0.317 and a Mean Squared Error value of 156.59.
+Even after scoping the dataset to cut out counties with extremely high amounts of militarized equipment (greater than 600 items), such as Cook County, IL (Chicago), and remove counties that had no instances of fatalities or transfers of militarized equipment, but the model still did not fit well. Using this subset of data, I acheived an R^2 value of 0.317 and a Mean Squared Error value of 156.59.
 
 ![Alt text](images/lin_reg_after.png)
 
 ### Predictions
-Despite not having a linear relationship, I did model a prediction to provide DLA/DoD auditors with a minimum threshold amount of militarized equipment in a county that should warrant an audit. 
+Despite not having a strong linear relationship in the data, I did model a prediction to provide DLA/DoD auditors with a minimum threshold amount of militarized equipment in a county that should warrant an audit. 
 
 My prediciton model used the data from the "AFTER" linear regression model showed above because I thought it was important to base predictions off of the scoped in data to provide a relatively sound recommendation. The model shows that counties with over 30 pieces of 1033-supplied militarized equipment theoretically have over 7 fatalities in that county which would place that county in the 75th percentile of all counties. Therefore, I recommend that at a minimum, the 1033 program enact audits starting at this threshold to increase oversight and provide increased transperancy. 
