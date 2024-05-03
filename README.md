@@ -24,21 +24,24 @@ For this analysis I used 2 datasets.
 
 ### 1033 FOIA Dataset
 
-The 1033 dataset had 243,492 rows and 8 columns. However, I noted that the datatset would likely be much bigger once I duplicated items that had Quantity values higher than 1. 
+The 1033 dataset was publicly available and was obtained thru a FOIA request. The dataset date range was from 2006 to 2014 had 243,492 rows and 8 columns. However, each item had a "Quantity" column which indicated that the true amount of surplus equipment transfered to LE was much greater than 243,000 items.
 The link to the dataset can be found here: (https://data.world/gene/military-surplus-2014-police)
 
 ### Police Fatality Dataset
 
-The Police Fatality dateset had 28,335 rows and 29 columns.
+The Police Fatality dateset collected data from 2000 to 2020 and had 28,335 rows and 29 columns. The dataset recorded all fatal encounters with Law Enforcement and even provided details about the cause of death.
 The link to the dataset can be found here: (https://www.kaggle.com/datasets/djonafegnem/police-fatalities-in-the-us-from-2000-to-2020)
 
-### Methodology
+### Equipment Transfers to Law Enforcement
 
-#### Objectives
-1033 FOIA Dataset
-- Clean 
-- Create columns by County for:
-    - Total acquisition value
-    - Total number of items acquired
-    - Total acquisition value of militarized equipment acquired
-    - Total number of militarized equipment acquired
+### Total Amount of Fatal Encounters with Law Enforcement
+
+### Top States and Counties with High Numbers of Militarized Equipment and High Instances of Fatal Encounters with Police
+
+## Predictive Modeling
+
+### Hypothesis Testing
+
+### Correlations
+
+### Linear Regression 
