@@ -45,5 +45,5 @@ The link to the dataset can be found here: (https://www.kaggle.com/datasets/djon
 ### Hypothesis Testing
 
 ### Correlations
-[text](blob:vscode-webview%3A//1s41auc9p7omnv0vnp127a54ar57sqq2qjpskishqlh3jvd6rv9v/fae5a6fe-66d8-48c6-9d5c-10d92e5ef305)
+![Alt text](images/heatmap.png)
 ### Linear Regression 
