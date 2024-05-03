@@ -20,7 +20,7 @@ I wanted to look at publicly available 1033 Program data from the Defense Logist
 
 ## Exploratory Data Analysis
 
-For this analysis I used 2 datasets.
+For this analysis I merged 2 datasets:
 
 ### 1033 FOIA Dataset
 
@@ -28,15 +28,27 @@ The 1033 dataset was publicly available and was obtained thru a FOIA request. Th
 
 The link to the dataset can be found here: (https://data.world/gene/military-surplus-2014-police)
 
-### Police Fatality Dataset
+### Fatal Encounters with Police Dataset
 
-The Police Fatality dateset collected data from 2000 to 2020 and had 28,335 rows and 29 columns. The dataset recorded all fatal encounters with Law Enforcement and even provided details about the cause of death.
+The Fatal Encounters dateset collected data from 2000 to 2020 and had 28,335 rows and 29 columns. The dataset recorded all fatal encounters with Law Enforcement and even provided details about the cause of death.
 
 The link to the dataset can be found here: (https://www.kaggle.com/datasets/djonafegnem/police-fatalities-in-the-us-from-2000-to-2020)
 
 ### Equipment Transfers to Law Enforcement
 
+This graph shows the amount of surplus equipment transfered to LE from 2006 and 2014. The blue line shows the total amount and the red line shows the amount of militarized equipment that was transfered. Interestingly, there is a peak in transfers in 2012.
+
+Because the 1033 program transfers surplus DoD equipment ranging from office supplies to grenade launchers, I filtered out the list of equipment in the 1033 dataset to only include equipment that is considered "militarized" from these categories:
+
+- Vehicles
+- Weapons
+- Tactical Gear
+
+
+![Alt text](images/Equipment_per_year.png)
+
 ### Total Amount of Fatal Encounters with Law Enforcement
+![Alt text](images/Fatalities_Over_Time.png)
 
 ### Top States and Counties with High Numbers of Militarized Equipment and High Instances of Fatal Encounters with Police
 
