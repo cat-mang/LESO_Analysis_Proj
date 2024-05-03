@@ -77,6 +77,8 @@ Based on the correlation heatamp below, I decided to create a linear regression 
 
 When looking at the whole dataset, there is a linear relationship between the amount of militarized equipment and the number of fatalities, but the viariance in the model is evident. 
 
+![Alt text](images/lin_reg_before.png) ![Alt text](images/lin_reg_after.png)
+
 Even after scoping the dataset to cut out counties such as Cook County, IL (Chicago) and remove counties that had no instances of fatalities or transfers of militarized equipment, the model still did not fit well. 
 
 ### Predictions
