@@ -20,7 +20,7 @@ I wanted to look at publicly available 1033 Program data from the Defense Logist
 
 ## Exploratory Data Analysis
 
-For this analysis I merged 2 datasets:
+For this analysis I merged 2 datasets based on the County and State. 
 
 ### 1033 FOIA Dataset
 
@@ -47,7 +47,18 @@ Because the 1033 program transfers surplus DoD equipment ranging from office sup
 
 ![Alt text](images/Equipment_per_year.png)
 
+Though there are many items of equipment transfered to LE agencies through the 1033 program, we can see from the histogram below that it is rare for a county to have more than 250 items of militarized equipment from a 1033 transfer.  
+
+![Alt text](images/equipment_hist.png)
+
+
+
 ### Total Amount of Fatal Encounters with Law Enforcement
+
+This graph depcits the total amount of fatalities caused by intentional use of force from 2000 - 2020. For the remainder of my analysis, I only used data from this data set from 2006 - 2020 in order to accurately analyze fatalities in counties after they received 1033 equipment. 
+
+I assess the drop in fatalities in 2020 is due to the COVID-19 pandemic. Perhaps increased scrutiny of police brutatlity during the summer of 2020 also impacted the amount of fatalities that year.
+
 ![Alt text](images/Fatalities_Over_Time.png)
 
 ### Top States and Counties with High Numbers of Militarized Equipment and High Instances of Fatal Encounters with Police
@@ -57,5 +68,18 @@ Because the 1033 program transfers surplus DoD equipment ranging from office sup
 ### Hypothesis Testing
 
 ### Correlations
+
+Based on the correlation heatamp below, I decided to create a linear regression model to determine if there was a linear relationship between the amount of militarized equipment a county had and the amount of fatalities in that county. 
+
 ![Alt text](images/heatmap.png)
+
 ### Linear Regression 
+
+When looking at the whole dataset, there is a linear relationship between the amount of militarized equipment and the number of fatalities, but the viariance in the model is evident. 
+
+Even after scoping the dataset to cut out counties such as Cook County, IL (Chicago) and remove counties that had no instances of fatalities or transfers of militarized equipment, the model still did not fit well. 
+
+### Predictions
+Despite not having a linear relationship, I did model a prediction to provide DLA/DoD auditors with a minimum threshold amount of militarized equipment in a county that should warrant an audit. 
+
+My prediciton model shows that counties with over 30 piece of 1033 supplied militarized equipment have over 7 fatalities in that county which would place that county in the 75th percentile of all counties. Therefore, I recommend that at a minimum, the 1033 program enact audits starting at this threshold to increase oversight and provide increased transperancy. 
